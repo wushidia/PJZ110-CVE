@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "pjz110-cp2a.260605.016",
+  "status": "verified",
+  "device": {
+    "manufacturer": "OnePlus",
+    "model": "OnePlus 13",
+    "codename": "PJZ110",
+    "product": "OP5D0DL1",
+    "fingerprint": "OnePlus/PJZ110/OP5D0DL1:17/CP2A.260605.016/V.487427a-2227f32-224bc4c:user/release-keys",
+    "buildDisplayId": "PJZ110_17.0.0.103(CN01)",
+    "androidRelease": "17",
+    "securityPatch": "2026-09-01",
+    "platform": "sun",
+    "soc": "SM8750",
+    "kernelRelease": "6.6.118-android15-8-g9bc34d5b0c79-abogki537459655-4k",
+    "pageSize": 4096,
+    "onlineCpus": 8,
+    "selinux": "Enforcing"
+  },
+  "images": {
+    "bootSha256": "af50a206d4720eae5c1163f5529adb36d87f4b94682ec9890324177b3eaea979",
+    "xblConfigSha256": "d0a826bf3ab5d9a6922b2aea206344f17a11e5915cafdcd5aca6b8754fd85d9c",
+    "bootKernelSize": 37001728,
+    "decodedImageSha256": "ee5ee448d2985eeeb7a8b5ad2e1efc34eeb410a8beae0ab484504d739124d613"
+  },
+  "artifacts": {
+    "timer": {
+      "source": "src/timer.c",
+      "path": "bin/timer",
+      "sha256": "c554e13a83f0a7f82d101bee89391a6c529029403d3158592fde53b0c81f4ee7",
+      "threads": true
+    }
+  },
+  "constants": {
+    "staticTimerSite": "0xffffffc0801a4dfc",
+    "timerSiteLow21": "0x1a4dfc",
+    "timerAlloc": 264,
+    "credReq": 184,
+    "credAlloc": 192,
+    "selinuxStateStatic": "0xffffffc08239c620",
+    "panicOnWarnStatic": "0xffffffc08214b2cc",
+    "credUidOff": 8,
+    "taskCredOff": 2080,
+    "copyProcessLow21": "0xab944",
+    "taskAllocBytes": 4800,
+    "rootUserStatic": "0xffffffc08216f6e0",
+    "initUserNsStatic": "0xffffffc08216f450",
+    "initUcountsStatic": "0xffffffc0821711b0",
+    "initGroupsStatic": "0xffffffc082170c40",
+    "fullCap": "0x1ffffffffff",
+    "selinuxSid": 1
+  },
+  "trace": {
+    "pageAllocId": 277,
+    "pageFreeId": 275,
+    "cacheAllocSiteLow21": "0xe4074",
+    "directMapBase": "0xffffff7f80000000"
+  },
+  "verified": {
+    "date": "2026-10-31",
+    "result": "KernelSU late-loaded, su -> uid=0 u:r:ksu:s0 while SELinux is Enforcing",
+    "logs": [
+      "timer ids  -> page_alloc=277 page_free=275 pairs=1029",
+      "timer      -> uid=0 u:r:shell:s0 ROOT_SHELL_OK",
+      "timer fake -> KSU_LOADED, /system/bin/su -c id = u:r:ksu:s0"
+    ]
+  }
+}

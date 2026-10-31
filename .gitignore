@@ -1,0 +1,3 @@
+# rebuild outputs other than the pinned bin/timer
+*.o
+*.log

@@ -1,0 +1,13 @@
+OnePlus 13 / PJZ110 POSIX CPU timer UAF adaptation
+Copyright 2026 the adaptation contributors
+
+This product includes software derived from the Android timer port published by
+zjns (MIT), which in turn derives from woshigenm's original Android port and from
+the ghostlock-app KernelSU late-load stage.
+
+The upstream work was modified for the exact OnePlus 13 (PJZ110) build listed in
+profiles/pjz110/. Exact provenance is recorded in src/timer.c (file header) and
+in README.md.
+
+No OnePlus firmware, boot image, raw kernel Image, private key, account token or
+device-unique secret is included.
